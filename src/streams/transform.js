@@ -1,8 +1,8 @@
 import { Transform } from 'stream';
 
 const reverseTransform = new Transform({
-    transform(chunk, encoding, callbacl) {
-        callbacl(null, chunk.toString().split('').reverse().join(''))
+    transform(chunk, _, cb) {
+        cb(null, chunk.toString().split('').reverse().join(''))
     }
 })
 
